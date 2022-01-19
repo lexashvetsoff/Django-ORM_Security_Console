@@ -11,5 +11,7 @@ if __name__ == '__main__':
     # Программируем здесь
     print('Количество пропусков:', Passcard.objects.count())  # noqa: T001
 
-passcard = Passcard.objects.all()
-print(passcard)
+passcards = Passcard.objects.all()
+
+for passcard in passcards:
+    print(passcard.owner_name, passcard.passcode, passcard.created_at, passcard.is_active, sep='\n')
