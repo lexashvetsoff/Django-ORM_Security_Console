@@ -13,5 +13,10 @@ if __name__ == '__main__':
 
 passcards = Passcard.objects.all()
 
+active_passcards = []
 for passcard in passcards:
-    print(passcard.owner_name, passcard.passcode, passcard.created_at, passcard.is_active, sep='\n')
+    # print(passcard.owner_name, passcard.passcode, passcard.created_at, passcard.is_active, sep='\n')
+    if passcard.is_active:
+        active_passcards.append(passcard)
+
+print(f'Всего пропусков: {Passcard.objects.count()}', f'Активных пропусков: {len(active_passcards)}')
