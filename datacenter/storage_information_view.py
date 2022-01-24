@@ -28,7 +28,6 @@ def format_duration(duration):
 
 
 def storage_information_view(request):
-    # Программируем здесь
 
     not_leave_visits = Visit.objects.filter(leaved_at=None)
 
