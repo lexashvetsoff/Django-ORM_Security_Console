@@ -14,7 +14,7 @@ pip install -r requirements.txt
 ### Запуск
 
 ```
-C:\progect>python main.py
+python main.py
 ```
 
 ### Цель проекта
